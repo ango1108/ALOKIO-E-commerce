@@ -4542,8 +4542,8 @@ vec3 skyColor(vec3 dir) {
 vec3 vividSky(vec3 dir) {
   vec3 sd = normalize(uSunDir);
   float y = max(dir.y, 0.0);
-  vec3 c = mix(vec3(0.235, 0.671, 0.812), vec3(0.216, 0.663, 0.843), smoothstep(0.0, 0.04, y));
-  c = mix(c, vec3(0.027, 0.549, 0.886), smoothstep(0.03, 0.14, y));
+  vec3 c = mix(vec3(0.2, 0.64, 0.86), vec3(0.17, 0.62, 0.88), smoothstep(0.0, 0.04, y));
+  c = mix(c, vec3(0.02, 0.52, 0.9), smoothstep(0.03, 0.13, y));
   c = mix(c, vec3(0.004, 0.412, 0.824), smoothstep(0.12, 0.3, y));
   c = mix(c, vec3(0.024, 0.384, 0.745), smoothstep(0.3, 0.6, y));
   float sun = max(dot(dir, sd), 0.0);
@@ -4557,7 +4557,7 @@ vec3 vividSky(vec3 dir) {
   c = mix(c, cloud, cov * 0.92);
   // hoàng hôn dịu: quầng vàng cam sát chân trời quanh mặt trời
   float low = 1.0 - smoothstep(0.0, 0.22, y);
-  c = mix(c, vec3(1.0, 0.8, 0.55), low * (0.65 * pow(sun, 7.0) + 0.12 * pow(sun, 2.0)));
+  c = mix(c, vec3(1.0, 0.8, 0.55), low * (0.5 * pow(sun, 8.0) + 0.07 * pow(sun, 2.0)));
   c += vec3(1.0, 0.85, 0.62) * (pow(sun, 2600.0) * 3.0 + pow(sun, 300.0) * 0.6 + pow(sun, 40.0) * 0.18);
   return min(c, vec3(1.0));
 }`,Uy=`
@@ -4633,12 +4633,12 @@ void main() {
   float sparkle = smoothstep(0.45, 0.9, fbm3(vWorld.xz * vec2(2.6, 0.9) + vec2(uTime * 0.5, uTime * 0.15)));
   float twinkle = smoothstep(0.7, 1.0, hash12(floor(vWorld.xz * vec2(12.0, 5.0)) + floor(uTime * 8.0)));
   col += sunCol * pathMask * (0.18 + 1.6 * sparkle + 2.4 * twinkle * sparkle) * (0.6 + 0.4 * fog) * (1.0 - 0.3 * uVivid);
-  // Trang chủ: màu nước lấy đúng theo ảnh biển mẫu (xanh ngọc #0ACED0 gần → #14D2D8 xa),
+  // Trang chủ: màu nước xanh ngọc trong (phương án D: #A1EBED gần → #A4EDEF xa),
   // chỉ thêm gợn sóng, vệt nắng và chút ánh hoàng hôn về phía mặt trời
   vec3 tq = vec3(0.0);
   if (uVivid > 0.5) {
     // màu ghi thẳng ra màn hình (hệ sRGB), không qua tone mapping → đúng sắc ảnh mẫu
-    tq = mix(vec3(0.039, 0.808, 0.816), vec3(0.078, 0.824, 0.847), smoothstep(8.0, 90.0, dist));
+    tq = mix(vec3(0.631, 0.922, 0.929), vec3(0.643, 0.929, 0.937), smoothstep(8.0, 90.0, dist));
     float wv = (vNormal.x + vNormal.z) * 0.8 + (dn.x + dn.z) * 2.0;
     tq *= 0.9 + 0.14 * smoothstep(-0.25, 0.25, wv);
     tq += vec3(0.8) * vFoam * 0.05;
