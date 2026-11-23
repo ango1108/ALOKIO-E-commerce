@@ -1,18 +1,719 @@
 <!DOCTYPE html>
-<html lang="vi">
+<!-- Trang: / — HTML xuất sẵn lúc build; js/alokio.js dựng lại với dữ liệu của người xem (localStorage) -->
+<html lang="vi" class="">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Trang chủ | Alokio – Âm Thanh Việt</title>
-<!-- Trang: / — nội dung được dựng bởi js/alokio.js từ dữ liệu giả lập (localStorage) -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alokio – Âm Thanh Việt</title>
+<meta name="description" content="Alokio – Âm Thanh Việt. Bộ sưu tập loa bluetooth cao cấp Alokio Luxe (sơn mài, khảm trai, nhôm champagne) và loa kéo karaoke chính hãng. Trải nghiệm 3D, thanh toán QR động.">
+<link rel="canonical" href="https://ango1108.github.io/ALOKIO-E-commerce/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alokio – Âm Thanh Việt">
+<meta property="og:title" content="Alokio – Âm Thanh Việt">
+<meta property="og:description" content="Alokio – Âm Thanh Việt. Bộ sưu tập loa bluetooth cao cấp Alokio Luxe (sơn mài, khảm trai, nhôm champagne) và loa kéo karaoke chính hãng. Trải nghiệm 3D, thanh toán QR động.">
+<meta property="og:url" content="https://ango1108.github.io/ALOKIO-E-commerce/">
+<meta property="og:image" content="https://ango1108.github.io/ALOKIO-E-commerce/img/og/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="vi_VN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F7FAFD">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/site.css?v=20261123c" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="css/site.css?v=20261123c"></noscript>
+<link rel="apple-touch-icon" href="img/icon-512.png">
+<link rel="preload" href="fonts/BeVietnamPro-Regular.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="fonts/PlayfairDisplay.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="img/hero-poster.webp" as="image" fetchpriority="high">
+<link rel="stylesheet" href="css/site.css?v=20261123d">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Alokio – Âm Thanh Việt","url":"https://ango1108.github.io/ALOKIO-E-commerce","logo":"https://ango1108.github.io/ALOKIO-E-commerce/img/icon-512.png","sameAs":["https://www.facebook.com/share/18ggn741qM/?mibextid=wwXIfr","https://vt.tiktok.com/ZS9PFAnTEY29m-8tE0D/","https://vn.shp.ee/1Eokhik4"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Alokio","url":"https://ango1108.github.io/ALOKIO-E-commerce","potentialAction":{"@type":"SearchAction","target":"https://ango1108.github.io/ALOKIO-E-commerce/tim-kiem?q={q}","query-input":"required name=q"}}</script>
 <script>try{if(localStorage.getItem('alokio:lite')==='1')document.documentElement.classList.add('lite')}catch(e){}</script>
 </head>
-<body>
-<style>#alk-loader{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;overflow:hidden;background:linear-gradient(180deg,#1F7FD0 0%,#5FB3E8 24%,#C3E6F5 46%);font-family:'Playfair Display',Georgia,serif;color:#0F1E33;transition:opacity .7s ease .15s,visibility 0s linear .9s}#alk-loader.is-out{opacity:0;visibility:hidden}#alk-loader.is-fast{transition:opacity .35s ease,visibility 0s linear .35s}#alk-loader .l-sun{position:absolute;right:16%;top:12%;width:44vmin;height:44vmin;margin:-22vmin -22vmin 0 0;border-radius:50%;background:radial-gradient(circle,rgba(255,250,236,.95) 0,rgba(255,236,196,.5) 18%,rgba(255,236,196,0) 62%);animation:l-breath 5s ease-in-out infinite}#alk-loader .l-rays{position:absolute;right:16%;top:12%;width:200vmax;height:200vmax;margin:-100vmax -100vmax 0 0;background:repeating-conic-gradient(from 200deg,rgba(255,246,222,0) 0deg,rgba(255,246,222,.22) 2deg,rgba(255,246,222,0) 6deg,rgba(255,246,222,0) 11deg);-webkit-mask-image:radial-gradient(circle,#000 0,transparent 40%);mask-image:radial-gradient(circle,#000 0,transparent 40%);animation:l-rays 16s ease-in-out infinite alternate}#alk-loader .l-sea{position:absolute;left:0;right:0;top:46%;bottom:0;overflow:hidden;background:linear-gradient(180deg,#BDEFF1 0%,#A1EBED 40%,#7FD6DE 100%)}#alk-loader .l-glint{position:absolute;z-index:1;right:16%;top:210px;bottom:0;width:26vmin;margin-right:-13vmin;background:repeating-linear-gradient(180deg,rgba(255,255,255,.0) 0,rgba(255,255,255,.75) 2px,rgba(255,255,255,0) 6px,rgba(255,255,255,0) 14px);-webkit-mask-image:linear-gradient(90deg,transparent,#000 40%,#000 60%,transparent);mask-image:linear-gradient(90deg,transparent,#000 40%,#000 60%,transparent);opacity:.3;animation:l-glint 1.6s steps(4) infinite}#alk-loader .l-stage{position:absolute;left:0;right:0;top:calc(46% - 150px);bottom:0}#alk-loader .l-boat{position:absolute;left:50%;top:70px;width:min(230px,52vw);margin-left:calc(min(230px,52vw)/-2);transform-origin:50% 92%;animation:l-bob 3.2s ease-in-out infinite}#alk-loader .l-boat svg{display:block;width:100%;height:auto;filter:drop-shadow(0 14px 18px rgba(15,30,51,.18))}#alk-loader .l-wave{position:absolute;left:-10%;right:-10%;height:90px;background-repeat:repeat-x;background-size:420px 90px;animation:l-wave linear infinite}#alk-loader .l-w1{top:118px;opacity:.55;animation-duration:9s;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 90'%3E%3Cpath d='M0 40 C70 18 140 18 210 40 S350 62 420 40 V90 H0Z' fill='%23C9F2F3'/%3E%3C/svg%3E")}#alk-loader .l-w2{top:150px;opacity:.85;animation-duration:6s;animation-direction:reverse;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 90'%3E%3Cpath d='M0 36 C70 12 140 12 210 36 S350 60 420 36 V90 H0Z' fill='%23A8E8EC'/%3E%3Cpath d='M0 36 C70 12 140 12 210 36 S350 60 420 36' fill='none' stroke='%23fff' stroke-opacity='.7' stroke-width='2'/%3E%3C/svg%3E")}#alk-loader .l-w3{top:172px;bottom:0;height:auto;animation-duration:4.2s;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 110'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%2392DCE3'/%3E%3Cstop offset='1' stop-color='%2364C8D5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 46 C90 14 170 14 260 46 S430 78 520 46 V110 H0Z' fill='url(%23g)'/%3E%3Cpath d='M0 46 C90 14 170 14 260 46 S430 78 520 46' fill='none' stroke='%23fff' stroke-opacity='.85' stroke-width='3'/%3E%3C/svg%3E"),linear-gradient(180deg,#64C8D5,#47B7C9);background-size:520px 110px,100% calc(100% - 100px);background-position:0 0,0 100px;background-repeat:repeat-x,no-repeat}#alk-loader .l-drop{position:absolute;top:168px;width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 0 1px rgba(43,92,148,.25);opacity:0;animation:l-drop 3.2s ease-out infinite}#alk-loader .l-d1{left:calc(50% - 112px);animation-delay:.2s}#alk-loader .l-d2{left:calc(50% - 128px);width:5px;height:5px;animation-delay:.35s}#alk-loader .l-d3{left:calc(50% + 108px);animation-delay:1.8s}#alk-loader .l-d4{left:calc(50% + 124px);width:4px;height:4px;animation-delay:1.95s}#alk-loader .l-cloud{position:absolute;top:14%;left:-30%;width:46vw;height:9vh;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.85),rgba(255,255,255,0));filter:blur(4px);animation:l-cloud 38s linear infinite}#alk-loader .l-c2{top:24%;width:30vw;height:6vh;animation-duration:52s;animation-delay:-20s;opacity:.7}@keyframes l-cloud{to{transform:translateX(170vw)}}#alk-loader .l-brand{position:absolute;left:0;right:0;bottom:10vh;z-index:2;text-align:center;color:#0F2A4A;text-shadow:0 1px 14px rgba(255,255,255,.55)}#alk-loader .l-brand b{display:block;font-weight:400;font-size:clamp(26px,4vw,40px);letter-spacing:.42em;margin-right:-.42em}#alk-loader .l-brand small{display:block;margin-top:6px;font:500 11px ui-monospace,Menlo,Consolas,monospace;letter-spacing:.3em;text-transform:uppercase;opacity:.9}#alk-loader .l-bar{display:block;width:150px;height:2px;margin:18px auto 10px;border-radius:2px;background:rgba(15,42,74,.16);overflow:hidden}#alk-loader .l-bar i{display:block;height:100%;width:40%;border-radius:inherit;background:linear-gradient(90deg,transparent,#F6E7C1,#C9A86A,transparent);animation:l-bar 1.4s ease-in-out infinite}#alk-loader .l-brand em{font:italic 400 15px 'Playfair Display',Georgia,serif;opacity:.95}@keyframes l-wave{to{background-position-x:-420px}}#alk-loader .l-w3{animation-name:l-wave3}@keyframes l-wave3{to{background-position:-520px 0,0 100px}}@keyframes l-bob{0%,100%{transform:translateY(0) rotate(-3deg)}25%{transform:translateY(-9px) rotate(1deg)}50%{transform:translateY(-3px) rotate(3.5deg)}75%{transform:translateY(-11px) rotate(-1deg)}}@keyframes l-drop{0%,40%{opacity:0;transform:translate(0,0)}46%{opacity:1}70%{opacity:1;transform:translate(var(--dx,-14px),-34px)}88%{opacity:0;transform:translate(calc(var(--dx,-14px)*1.5),4px)}100%{opacity:0}}#alk-loader .l-d3,#alk-loader .l-d4{--dx:14px}@keyframes l-breath{50%{transform:scale(1.08);opacity:.85}}@keyframes l-rays{from{transform:rotate(-4deg)}to{transform:rotate(4deg)}}@keyframes l-glint{50%{opacity:.35}}@keyframes l-bar{from{transform:translateX(-110%)}to{transform:translateX(260%)}}@media (prefers-reduced-motion:reduce){#alk-loader *{animation:none!important}}#alk-loader.is-intro .l-stage,#alk-loader.is-intro .l-brand em{display:none}</style><div id="alk-loader" role="status" aria-live="polite" aria-label="Đang tải Alokio"><div class="l-rays"></div><div class="l-sun"></div><i class="l-cloud"></i><i class="l-cloud l-c2"></i><div class="l-sea"></div><div class="l-stage"><div class="l-wave l-w1"></div><div class="l-boat"><svg viewBox="0 0 230 168" aria-hidden="true"><defs><linearGradient id="lb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2E486E"/><stop offset="1" stop-color="#0E1A2C"/></linearGradient><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6E7C1"/><stop offset=".5" stop-color="#C9A86A"/><stop offset="1" stop-color="#9C7E48"/></linearGradient><pattern id="lp" width="5" height="5" patternUnits="userSpaceOnUse"><circle cx="2.5" cy="2.5" r="1.1" fill="#5E6A80"/></pattern></defs><path d="M62 62 C62 10, 168 10, 168 62" fill="none" stroke="#1E3352" stroke-width="13" stroke-linecap="round"/><path d="M62 62 C62 10, 168 10, 168 62" fill="none" stroke="#F5EEE0" stroke-width="8" stroke-linecap="round"/><rect x="10" y="56" width="210" height="104" rx="24" fill="url(#lb)"/><path d="M28 64 Q34 60 60 60" stroke="#fff" stroke-opacity=".35" stroke-width="2.5" fill="none" stroke-linecap="round"/><rect x="82" y="70" width="124" height="76" rx="12" fill="#7E8AA0" stroke="url(#lg)" stroke-width="6"/><rect x="88" y="76" width="112" height="64" rx="8" fill="url(#lp)"/><text x="144" y="134" text-anchor="middle" font-family="Georgia,serif" font-size="8" letter-spacing="3" fill="#E9D9B5">ALOKIO</text><circle cx="46" cy="108" r="24" fill="#16233A" stroke="#F5EEE0" stroke-width="5"/><circle cx="46" cy="108" r="11" fill="#0E1828"/><circle cx="104" cy="56" r="5" fill="url(#lg)"/><circle cx="124" cy="56" r="5" fill="url(#lg)"/><circle cx="144" cy="56" r="5" fill="url(#lg)"/></svg></div><i class="l-drop l-d1"></i><i class="l-drop l-d2"></i><i class="l-drop l-d3"></i><i class="l-drop l-d4"></i><div class="l-wave l-w2"></div><div class="l-wave l-w3"></div><div class="l-glint"></div></div><div class="l-brand"><b>ALOKIO</b><small>Âm Thanh Việt</small><span class="l-bar"><i></i></span><em>Alokio xin chào</em></div></div><script>(function(){try{var d=document.documentElement,p=location.pathname;if(!/(\/|index\.html)$/.test(p)||sessionStorage.getItem('alokio:intro')||localStorage.getItem('alokio:lite')==='1'||matchMedia('(prefers-reduced-motion: reduce)').matches)return;d.classList.add('alk-intro');document.getElementById('alk-loader').classList.add('is-intro');var l=document.createElement('link');l.rel='preload';l.as='script';l.href='js/alokio-3d.js?v=20261123c';document.head.appendChild(l)}catch(e){}})()</script>
-<noscript><style>#alk-loader{display:none}</style><p style="padding:40px;text-align:center;font-family:sans-serif">Vui lòng bật JavaScript để xem website Alokio.</p></noscript>
-<script src="js/alokio.js?v=20261123c" defer></script>
+<body class="" data-page="home"><style>#alk-loader{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;overflow:hidden;background:linear-gradient(180deg,#1F7FD0 0%,#5FB3E8 24%,#C3E6F5 46%);font-family:'Playfair Display',Georgia,serif;color:#0F1E33;transition:opacity .7s ease .15s,visibility 0s linear .9s}#alk-loader.is-out{opacity:0;visibility:hidden}#alk-loader.is-fast{transition:opacity .35s ease,visibility 0s linear .35s}#alk-loader .l-sun{position:absolute;right:16%;top:12%;width:44vmin;height:44vmin;margin:-22vmin -22vmin 0 0;border-radius:50%;background:radial-gradient(circle,rgba(255,250,236,.95) 0,rgba(255,236,196,.5) 18%,rgba(255,236,196,0) 62%);animation:l-breath 5s ease-in-out infinite}#alk-loader .l-rays{position:absolute;right:16%;top:12%;width:200vmax;height:200vmax;margin:-100vmax -100vmax 0 0;background:repeating-conic-gradient(from 200deg,rgba(255,246,222,0) 0deg,rgba(255,246,222,.22) 2deg,rgba(255,246,222,0) 6deg,rgba(255,246,222,0) 11deg);-webkit-mask-image:radial-gradient(circle,#000 0,transparent 40%);mask-image:radial-gradient(circle,#000 0,transparent 40%);animation:l-rays 16s ease-in-out infinite alternate}#alk-loader .l-sea{position:absolute;left:0;right:0;top:46%;bottom:0;overflow:hidden;background:linear-gradient(180deg,#BDEFF1 0%,#A1EBED 40%,#7FD6DE 100%)}#alk-loader .l-glint{position:absolute;z-index:1;right:16%;top:210px;bottom:0;width:26vmin;margin-right:-13vmin;background:repeating-linear-gradient(180deg,rgba(255,255,255,.0) 0,rgba(255,255,255,.75) 2px,rgba(255,255,255,0) 6px,rgba(255,255,255,0) 14px);-webkit-mask-image:linear-gradient(90deg,transparent,#000 40%,#000 60%,transparent);mask-image:linear-gradient(90deg,transparent,#000 40%,#000 60%,transparent);opacity:.3;animation:l-glint 1.6s steps(4) infinite}#alk-loader .l-stage{position:absolute;left:0;right:0;top:calc(46% - 150px);bottom:0}#alk-loader .l-boat{position:absolute;left:50%;top:70px;width:min(230px,52vw);margin-left:calc(min(230px,52vw)/-2);transform-origin:50% 92%;animation:l-bob 3.2s ease-in-out infinite}#alk-loader .l-boat svg{display:block;width:100%;height:auto;filter:drop-shadow(0 14px 18px rgba(15,30,51,.18))}#alk-loader .l-wave{position:absolute;left:-10%;right:-10%;height:90px;background-repeat:repeat-x;background-size:420px 90px;animation:l-wave linear infinite}#alk-loader .l-w1{top:118px;opacity:.55;animation-duration:9s;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 90'%3E%3Cpath d='M0 40 C70 18 140 18 210 40 S350 62 420 40 V90 H0Z' fill='%23C9F2F3'/%3E%3C/svg%3E")}#alk-loader .l-w2{top:150px;opacity:.85;animation-duration:6s;animation-direction:reverse;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 90'%3E%3Cpath d='M0 36 C70 12 140 12 210 36 S350 60 420 36 V90 H0Z' fill='%23A8E8EC'/%3E%3Cpath d='M0 36 C70 12 140 12 210 36 S350 60 420 36' fill='none' stroke='%23fff' stroke-opacity='.7' stroke-width='2'/%3E%3C/svg%3E")}#alk-loader .l-w3{top:172px;bottom:0;height:auto;animation-duration:4.2s;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 110'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%2392DCE3'/%3E%3Cstop offset='1' stop-color='%2364C8D5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 46 C90 14 170 14 260 46 S430 78 520 46 V110 H0Z' fill='url(%23g)'/%3E%3Cpath d='M0 46 C90 14 170 14 260 46 S430 78 520 46' fill='none' stroke='%23fff' stroke-opacity='.85' stroke-width='3'/%3E%3C/svg%3E"),linear-gradient(180deg,#64C8D5,#47B7C9);background-size:520px 110px,100% calc(100% - 100px);background-position:0 0,0 100px;background-repeat:repeat-x,no-repeat}#alk-loader .l-drop{position:absolute;top:168px;width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 0 1px rgba(43,92,148,.25);opacity:0;animation:l-drop 3.2s ease-out infinite}#alk-loader .l-d1{left:calc(50% - 112px);animation-delay:.2s}#alk-loader .l-d2{left:calc(50% - 128px);width:5px;height:5px;animation-delay:.35s}#alk-loader .l-d3{left:calc(50% + 108px);animation-delay:1.8s}#alk-loader .l-d4{left:calc(50% + 124px);width:4px;height:4px;animation-delay:1.95s}#alk-loader .l-cloud{position:absolute;top:14%;left:-30%;width:46vw;height:9vh;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.85),rgba(255,255,255,0));filter:blur(4px);animation:l-cloud 38s linear infinite}#alk-loader .l-c2{top:24%;width:30vw;height:6vh;animation-duration:52s;animation-delay:-20s;opacity:.7}@keyframes l-cloud{to{transform:translateX(170vw)}}#alk-loader .l-brand{position:absolute;left:0;right:0;bottom:10vh;z-index:2;text-align:center;color:#0F2A4A;text-shadow:0 1px 14px rgba(255,255,255,.55)}#alk-loader .l-brand b{display:block;font-weight:400;font-size:clamp(26px,4vw,40px);letter-spacing:.42em;margin-right:-.42em}#alk-loader .l-brand small{display:block;margin-top:6px;font:500 11px ui-monospace,Menlo,Consolas,monospace;letter-spacing:.3em;text-transform:uppercase;opacity:.9}#alk-loader .l-bar{display:block;width:150px;height:2px;margin:18px auto 10px;border-radius:2px;background:rgba(15,42,74,.16);overflow:hidden}#alk-loader .l-bar i{display:block;height:100%;width:40%;border-radius:inherit;background:linear-gradient(90deg,transparent,#F6E7C1,#C9A86A,transparent);animation:l-bar 1.4s ease-in-out infinite}#alk-loader .l-brand em{font:italic 400 15px 'Playfair Display',Georgia,serif;opacity:.95}@keyframes l-wave{to{background-position-x:-420px}}#alk-loader .l-w3{animation-name:l-wave3}@keyframes l-wave3{to{background-position:-520px 0,0 100px}}@keyframes l-bob{0%,100%{transform:translateY(0) rotate(-3deg)}25%{transform:translateY(-9px) rotate(1deg)}50%{transform:translateY(-3px) rotate(3.5deg)}75%{transform:translateY(-11px) rotate(-1deg)}}@keyframes l-drop{0%,40%{opacity:0;transform:translate(0,0)}46%{opacity:1}70%{opacity:1;transform:translate(var(--dx,-14px),-34px)}88%{opacity:0;transform:translate(calc(var(--dx,-14px)*1.5),4px)}100%{opacity:0}}#alk-loader .l-d3,#alk-loader .l-d4{--dx:14px}@keyframes l-breath{50%{transform:scale(1.08);opacity:.85}}@keyframes l-rays{from{transform:rotate(-4deg)}to{transform:rotate(4deg)}}@keyframes l-glint{50%{opacity:.35}}@keyframes l-bar{from{transform:translateX(-110%)}to{transform:translateX(260%)}}@media (prefers-reduced-motion:reduce){#alk-loader *{animation:none!important}}#alk-loader.is-intro .l-stage,#alk-loader.is-intro .l-brand em{display:none}</style><div id="alk-loader" role="status" aria-live="polite" aria-label="Đang tải Alokio"><div class="l-rays"></div><div class="l-sun"></div><i class="l-cloud"></i><i class="l-cloud l-c2"></i><div class="l-sea"></div><div class="l-stage"><div class="l-wave l-w1"></div><div class="l-boat"><svg viewBox="0 0 230 168" aria-hidden="true"><defs><linearGradient id="lb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2E486E"/><stop offset="1" stop-color="#0E1A2C"/></linearGradient><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6E7C1"/><stop offset=".5" stop-color="#C9A86A"/><stop offset="1" stop-color="#9C7E48"/></linearGradient><pattern id="lp" width="5" height="5" patternUnits="userSpaceOnUse"><circle cx="2.5" cy="2.5" r="1.1" fill="#5E6A80"/></pattern></defs><path d="M62 62 C62 10, 168 10, 168 62" fill="none" stroke="#1E3352" stroke-width="13" stroke-linecap="round"/><path d="M62 62 C62 10, 168 10, 168 62" fill="none" stroke="#F5EEE0" stroke-width="8" stroke-linecap="round"/><rect x="10" y="56" width="210" height="104" rx="24" fill="url(#lb)"/><path d="M28 64 Q34 60 60 60" stroke="#fff" stroke-opacity=".35" stroke-width="2.5" fill="none" stroke-linecap="round"/><rect x="82" y="70" width="124" height="76" rx="12" fill="#7E8AA0" stroke="url(#lg)" stroke-width="6"/><rect x="88" y="76" width="112" height="64" rx="8" fill="url(#lp)"/><text x="144" y="134" text-anchor="middle" font-family="Georgia,serif" font-size="8" letter-spacing="3" fill="#E9D9B5">ALOKIO</text><circle cx="46" cy="108" r="24" fill="#16233A" stroke="#F5EEE0" stroke-width="5"/><circle cx="46" cy="108" r="11" fill="#0E1828"/><circle cx="104" cy="56" r="5" fill="url(#lg)"/><circle cx="124" cy="56" r="5" fill="url(#lg)"/><circle cx="144" cy="56" r="5" fill="url(#lg)"/></svg></div><i class="l-drop l-d1"></i><i class="l-drop l-d2"></i><i class="l-drop l-d3"></i><i class="l-drop l-d4"></i><div class="l-wave l-w2"></div><div class="l-wave l-w3"></div><div class="l-glint"></div></div><div class="l-brand"><b>ALOKIO</b><small>Âm Thanh Việt</small><span class="l-bar"><i></i></span><em>Alokio xin chào</em></div></div><script>(function(){try{var d=document.documentElement,p=location.pathname;if(!/(\/|index\.html)$/.test(p)||sessionStorage.getItem('alokio:intro')||localStorage.getItem('alokio:lite')==='1'||matchMedia('(prefers-reduced-motion: reduce)').matches)return;d.classList.add('alk-intro');document.getElementById('alk-loader').classList.add('is-intro');var l=document.createElement('link');l.rel='preload';l.as='script';l.href='js/alokio-3d.js?v=20261123d';document.head.appendChild(l)}catch(e){}})()</script>
+<a class="skip" href="#main">Bỏ qua tới nội dung chính</a>
+
+<header class="nav" data-nav>
+  <div class="nav__pill">
+    <a class="nav__brand" href="index.html" aria-label="Alokio – Trang chủ"><span class="wordmark ">ALOKIO</span></a>
+    <nav class="nav__links" aria-label="Điều hướng chính">
+      <ul>
+        <li class="has-mega"><a href="bo-suu-tap.html?slug=alokio-luxe" >Alokio Luxe</a>
+          <div class="mega" role="group" aria-label="Các mẫu Alokio Luxe"><div class="mega__grid"><a class="mega__item" href="san-pham--alokio-luxe-giot.html"><img src="img/products/alokio-luxe-giot.webp" alt="" width="120" height="120" loading="lazy" decoding="async"><span>Giọt</span></a><a class="mega__item" href="san-pham--alokio-luxe-song.html"><img src="img/products/alokio-luxe-song.webp" alt="" width="120" height="120" loading="lazy" decoding="async"><span>Sóng</span></a><a class="mega__item" href="san-pham--alokio-luxe-ha-long.html"><img src="img/products/alokio-luxe-ha-long.webp" alt="" width="120" height="120" loading="lazy" decoding="async"><span>Hạ Long</span></a><a class="mega__item" href="san-pham--alokio-luxe-hoi-an.html"><img src="img/products/alokio-luxe-hoi-an.webp" alt="" width="120" height="120" loading="lazy" decoding="async"><span>Hội An</span></a><a class="mega__item" href="san-pham--alokio-luxe-hue.html"><img src="img/products/alokio-luxe-hue.webp" alt="" width="120" height="120" loading="lazy" decoding="async"><span>Huế</span></a><a class="mega__item" href="san-pham--alokio-luxe-trang-an.html"><img src="img/products/alokio-luxe-trang-an.webp" alt="" width="120" height="120" loading="lazy" decoding="async"><span>Tràng An</span></a><a class="mega__item" href="san-pham--alokio-luxe-ho-tay.html"><img src="img/products/alokio-luxe-ho-tay.webp" alt="" width="120" height="120" loading="lazy" decoding="async"><span>Hồ Tây</span></a><a class="mega__item" href="san-pham--alokio-luxe-song-huong.html"><img src="img/products/alokio-luxe-song-huong.webp" alt="" width="120" height="120" loading="lazy" decoding="async"><span>Sông Hương</span></a><a class="mega__item" href="san-pham--alokio-luxe-son-doong.html"><img src="img/products/alokio-luxe-son-doong.webp" alt="" width="120" height="120" loading="lazy" decoding="async"><span>Sơn Đoòng</span></a><a class="mega__item" href="san-pham--alokio-luxe-le-hoi.html"><img src="img/products/alokio-luxe-le-hoi.webp" alt="" width="120" height="120" loading="lazy" decoding="async"><span>Lễ Hội</span></a></div><a class="mega__all link-arrow" href="bo-suu-tap.html?slug=alokio-luxe">Xem toàn bộ bộ sưu tập <svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a></div>
+        </li><li class=""><a href="bo-suu-tap.html?slug=am-thanh-viet-karaoke" >Karaoke</a>
+          
+        </li><li class=""><a href="showroom.html" >Showroom 3D</a>
+          
+        </li><li class=""><a href="flash-sale.html" >Flash sale</a>
+          
+        </li><li class=""><a href="blog.html" >Cẩm nang</a>
+          
+        </li><li class=""><a href="ho-tro.html" >Hỗ trợ</a>
+          
+        </li>
+      </ul>
+    </nav>
+    <div class="nav__actions">
+      <button class="icon-btn" type="button" data-sound-toggle aria-pressed="false" title="Âm thanh: Tắt"><span class="sr-only" data-sound-label>Âm thanh: Tắt</span><svg class="ico when-off" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="m16 9 5 6"/><path d="m21 9-5 6"/></svg><svg class="ico when-on" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button>
+      <button class="icon-btn" type="button" data-search-open aria-label="Tìm kiếm"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      <a class="icon-btn hide-sm" href="so-sanh.html" aria-label="So sánh sản phẩm"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg><span class="badge" data-compare-count hidden>0</span></a>
+      <a class="icon-btn hide-sm" href="yeu-thich.html" aria-label="Danh sách yêu thích"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.8 6.5 4.5c2-.2 3.6.9 4.5 2.4.9-1.5 2.5-2.6 4.5-2.4 3.5.3 5.3 3.8 3.7 6.9C19 15.6 12 20 12 20Z"/></svg><span class="badge" data-wish-count hidden>0</span></a>
+      <a class="icon-btn hide-sm" href="dang-nhap.html" aria-label="Tài khoản"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.2-4 4.3-6 8-6s6.8 2 8 6"/></svg></a>
+      <button class="icon-btn" type="button" data-cart-open aria-label="Giỏ hàng" aria-controls="minicart"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg><span class="badge" data-cart-count hidden>0</span></button>
+      <span class="nav__social hide-md">
+        <a class="icon-btn icon-btn--sm" href="https://www.facebook.com/share/18ggn741qM/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook Alokio (mở tab mới)"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 8.5V7c0-.8.5-1.2 1.2-1.2H17V3h-2.6C11.9 3 11 4.6 11 6.8v1.7H8.5v3H11V21h3v-9.5h2.6l.4-3H14Z" fill="currentColor" stroke="none"/></svg></a>
+        <a class="icon-btn icon-btn--sm" href="https://vt.tiktok.com/ZS9PFAnTEY29m-8tE0D/" target="_blank" rel="noopener noreferrer" aria-label="TikTok Shop Alokio (mở tab mới)"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16.6 3c.4 2.2 1.8 3.8 4 4v3.1c-1.5 0-2.9-.4-4-1.1v6.3a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.2a2.7 2.7 0 1 0 1.9 2.6V3h3Z" fill="currentColor" stroke="none"/></svg></a>
+        <a class="icon-btn icon-btn--sm" href="https://vn.shp.ee/1Eokhik4" target="_blank" rel="noopener noreferrer" aria-label="Shopee Alokio (mở tab mới)"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7h14l-1.2 12.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/><path d="M14 11.2c-.5-.5-1.2-.8-2-.8-1.1 0-1.9.6-1.9 1.4 0 1.9 4 1 4 3 0 .9-.9 1.5-2.1 1.5-.9 0-1.7-.4-2.2-.9"/></svg></a>
+      </span>
+      <button class="icon-btn show-md" type="button" data-drawer-open aria-label="Mở menu" aria-controls="mobile-menu" aria-expanded="false"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+<section class="hero" data-hero aria-labelledby="hero-title">
+  <div class="hero__fallback" aria-hidden="true"></div>
+  <img class="hero__poster" src="img/hero-poster.webp" alt="" width="1920" height="1080" fetchpriority="high" decoding="async" aria-hidden="true">
+  <canvas class="hero__canvas" data-hero-canvas aria-hidden="true"></canvas>
+  <div class="hero__rays" aria-hidden="true"><i></i><i></i><b></b></div>
+  <div class="hero__scrim" aria-hidden="true"></div>
+  <div class="hero__copy">
+    <span class="eyebrow fade-up" style="--d:150ms">Alokio Luxe · Hạ Long · Stereo 360°</span>
+    <h1 class="display" id="hero-title"><span class="w"><span style="--i:0">Âm</span></span> <span class="w"><span style="--i:1">thanh</span></span> <span class="w"><span style="--i:2">Việt,</span></span> <span class="w"><span style="--i:3">lan</span></span> <span class="w"><span style="--i:4">trên</span></span> <span class="w"><span style="--i:5"><em>mặt</em></span></span> <span class="w"><span style="--i:6"><em>nước.</em></span></span></h1>
+    <p class="hero__sub fade-up">Sơn mài, khảm trai và 80 W âm thanh stereo 360° — chiếc loa đủ đẹp để trưng bày, đủ bền để mang ra biển.</p>
+    <div class="hero__ctas fade-up" style="--d:1000ms">
+      <a class="btn btn--primary btn--lg" href="san-pham--alokio-luxe-ha-long.html">Đặt Alokio Hạ Long</a>
+      <a class="btn btn--ghost btn--lg" href="showroom.html"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="m4 7.5 8 4.5 8-4.5"/><path d="M12 12v9"/></svg> Vào phòng trưng bày 3D</a>
+      <a class="link-arrow" href="cua-hang.html">Khám phá cửa hàng <svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+    </div>
+    <p class="hero__badge fade-up" style="--d:1150ms"><span class="stars" role="img" aria-label="4.7 trên 5 sao">★★★★★<span class="stars__off"></span></span> <b>4,7/5</b> · 7 đánh giá · <span class="price">7.990.000 ₫</span></p>
+  </div>
+  <button class="audio-hint" type="button" data-audio-hint><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span> Bật âm thanh để mặt nước rung theo nhạc</button>
+  <p class="hero__hint" aria-hidden="true">Chạm vào mặt nước — sóng sẽ lan theo bạn <i></i></p>
+</section>
+
+<section class="section" aria-labelledby="mf-title">
+  <div class="container">
+    <span class="eyebrow reveal">Sang trọng kiểu Việt</span>
+    <h2 class="manifesto reveal" id="mf-title">Một chiếc loa nên đẹp cả khi <em>tắt nhạc</em>, và hay đến mức bạn không muốn tắt.</h2>
+    <div class="cards3">
+      <article class="feature glass reveal">
+        <div class="feature__art"><img src="img/feat-lacquer.webp" alt="Cận cảnh bề mặt sơn mài và vòng khảm trai" width="800" height="400" loading="lazy"></div>
+        <span class="label">01 · Chế tác</span><h3>Sơn mài &amp; khảm trai</h3>
+        <p>Nhiều lớp sơn mài mài tay cho độ bóng sâu như mặt hồ; viền khảm trai đổi sắc theo từng góc nhìn.</p>
+      </article>
+      <article class="feature glass reveal">
+        <div class="feature__art"><img src="img/feat-sound.webp" alt="Bên trong loa: woofer và tweeter" width="800" height="400" loading="lazy"></div>
+        <span class="label">02 · Âm thanh</span><h3>Lấp đầy căn phòng</h3>
+        <p>Stereo 360° trên dòng di động, tới 150 W ba đường tiếng trên dòng tại gia — bass chắc, giọng hát ấm.</p>
+      </article>
+      <article class="feature glass reveal">
+        <div class="feature__art"><img src="img/feat-water.webp" alt="Loa nổi trên mặt nước" width="800" height="400" loading="lazy"></div>
+        <span class="label">03 · Bền bỉ</span><h3>Sinh ra cho mặt nước</h3>
+        <p>Chuẩn IP67, thiết kế nổi trên nước, pin hơn 30 giờ và có thể thay được — đồng hành nhiều năm.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--mist" id="bo-suu-tap" aria-labelledby="col-title">
+  <div class="container">
+    <div class="section__head">
+      <div><span class="eyebrow reveal">Bộ sưu tập Alokio Luxe</span><h2 class="h2 reveal" id="col-title">Mỗi mẫu loa, một <em>cảnh sắc</em> Việt.</h2></div>
+      <div class="tabs reveal" role="tablist" aria-label="Nhóm sản phẩm">
+        <button class="tab" role="tab" id="tab-di-dong" aria-controls="panel-di-dong" aria-selected="true" tabindex="0" data-tab="di-dong">Di động</button><button class="tab" role="tab" id="tab-tai-gia" aria-controls="panel-tai-gia" aria-selected="" tabindex="-1" data-tab="tai-gia">Tại gia</button><button class="tab" role="tab" id="tab-rap-phim" aria-controls="panel-rap-phim" aria-selected="" tabindex="-1" data-tab="rap-phim">Thông minh &amp; Rạp phim</button><button class="tab" role="tab" id="tab-tiec" aria-controls="panel-tiec" aria-selected="" tabindex="-1" data-tab="tiec">Tiệc</button>
+      </div>
+    </div>
+    
+    <div class="tabpanel" role="tabpanel" id="panel-di-dong" aria-labelledby="tab-di-dong"  data-panel="di-dong">
+      <div class="stage">
+        <div class="stage__view" data-stage-view data-model='{"type":"halong"}' data-finish="ngoc-trai">
+          <img class="stage__img" src="img/products/alokio-luxe-ha-long.webp" alt="Alokio Luxe Hạ Long" width="900" height="780" loading="lazy">
+          <span class="view-hint">Kéo để xoay 360°</span>
+        </div>
+        <div class="stage__info">
+          <span class="tag tag--concept">Bộ sưu tập cao cấp</span>
+          <h3>Alokio Luxe Hạ Long</h3>
+          <p class="stage__tagline">Đủ đẹp để trưng bày, đủ bền để mang ra biển.</p>
+          <ul class="stage__specs"><li>80 W stereo 360°</li><li>Pin 30+ giờ, thay được</li><li>IP67 · nổi trên nước</li></ul>
+          <div class="stage__price"><span class="price">7.990.000 ₫</span></div>
+          <div class="stage__ctas">
+            <a class="btn btn--primary" href="san-pham--alokio-luxe-ha-long.html#atelier"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3c.6 4.2 2.8 6.4 7 7-4.2.6-6.4 2.8-7 7-.6-4.2-2.8-6.4-7-7 4.2-.6 6.4-2.8 7-7Z"/></svg> Tuỳ biến tại Atelier</a>
+            <button class="btn btn--ghost" type="button" data-add="p-halong" data-finish="ngoc-trai" data-name="Alokio Luxe Hạ Long"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg> Thêm vào giỏ</button>
+          </div>
+        </div>
+      </div>
+      <div class="rail" style="margin-top:40px">
+<article class="pcard pcard--luxe ">
+  <a class="pcard__media" href="san-pham--alokio-luxe-giot.html" tabindex="-1" aria-hidden="true">
+    <img src="img/products/alokio-luxe-giot.webp" alt="" width="600" height="600" loading="lazy" decoding="async">
+  </a>
+  <div class="pcard__tags">
+    <span class="tag tag--concept">Alokio Luxe</span>
+    <span class="tag tag--flash"><svg class="ico " width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg> Flash sale</span>
+    
+  </div>
+  <button class="icon-btn pcard__wish" type="button" data-wish="p-giot" aria-pressed="false" aria-label="Yêu thích Alokio Luxe Giọt"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.8 6.5 4.5c2-.2 3.6.9 4.5 2.4.9-1.5 2.5-2.6 4.5-2.4 3.5.3 5.3 3.8 3.7 6.9C19 15.6 12 20 12 20Z"/></svg></button>
+  <div class="pcard__body">
+    <a class="pcard__name" href="san-pham--alokio-luxe-giot.html">Alokio Luxe Giọt</a>
+    <p class="pcard__sub">Một giọt âm thanh, vừa trong lòng bàn tay.</p>
+    <div class="rating"><span class="stars" role="img" aria-label="4.6 trên 5 sao">★★★★★<span class="stars__off"></span></span> <span>4,6 (5)</span></div>
+    <div class="pcard__foot">
+      <div><span class="price price--flash">1.990.000 ₫</span><span class="price--old">2.490.000 ₫</span></div>
+      <div class="swatches" aria-label="Màu: Ngọc Trai, Sương Sớm, Huyền"><span class="swatch" style="background:#EFE7DA" title="Ngọc Trai"></span><span class="swatch" style="background:#BCD3EA" title="Sương Sớm"></span><span class="swatch" style="background:#141A24" title="Huyền"></span></div>
+    </div>
+    <button class="btn btn--soft btn--sm pcard__add" type="button" data-add="p-giot" data-finish="ngoc-trai" data-name="Alokio Luxe Giọt" ><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg> Thêm vào giỏ</button>
+  </div>
+</article>
+<article class="pcard pcard--luxe ">
+  <a class="pcard__media" href="san-pham--alokio-luxe-song.html" tabindex="-1" aria-hidden="true">
+    <img src="img/products/alokio-luxe-song.webp" alt="" width="600" height="600" loading="lazy" decoding="async">
+  </a>
+  <div class="pcard__tags">
+    <span class="tag tag--concept">Alokio Luxe</span>
+    <span class="tag tag--flash"><svg class="ico " width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg> Flash sale</span>
+    
+  </div>
+  <button class="icon-btn pcard__wish" type="button" data-wish="p-song" aria-pressed="false" aria-label="Yêu thích Alokio Luxe Sóng"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.8 6.5 4.5c2-.2 3.6.9 4.5 2.4.9-1.5 2.5-2.6 4.5-2.4 3.5.3 5.3 3.8 3.7 6.9C19 15.6 12 20 12 20Z"/></svg></button>
+  <div class="pcard__body">
+    <a class="pcard__name" href="san-pham--alokio-luxe-song.html">Alokio Luxe Sóng</a>
+    <p class="pcard__sub">Stereo 360°, lan toả như con sóng.</p>
+    <div class="rating"><span class="stars" role="img" aria-label="4.8 trên 5 sao">★★★★★<span class="stars__off"></span></span> <span>4,8 (5)</span></div>
+    <div class="pcard__foot">
+      <div><span class="price price--flash">3.690.000 ₫</span><span class="price--old">4.290.000 ₫</span></div>
+      <div class="swatches" aria-label="Màu: Ngọc Trai, Sương Sớm, Huyền, Óc Chó"><span class="swatch" style="background:#EFE7DA" title="Ngọc Trai"></span><span class="swatch" style="background:#BCD3EA" title="Sương Sớm"></span><span class="swatch" style="background:#141A24" title="Huyền"></span><span class="swatch" style="background:#6A4630" title="Óc Chó"></span></div>
+    </div>
+    <button class="btn btn--soft btn--sm pcard__add" type="button" data-add="p-song" data-finish="ngoc-trai" data-name="Alokio Luxe Sóng" ><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg> Thêm vào giỏ</button>
+  </div>
+</article>
+<article class="pcard pcard--luxe ">
+  <a class="pcard__media" href="san-pham--alokio-luxe-ha-long.html" tabindex="-1" aria-hidden="true">
+    <img src="img/products/alokio-luxe-ha-long.webp" alt="" width="600" height="600" loading="lazy" decoding="async">
+  </a>
+  <div class="pcard__tags">
+    <span class="tag tag--concept">Alokio Luxe</span>
+    
+    
+  </div>
+  <button class="icon-btn pcard__wish" type="button" data-wish="p-halong" aria-pressed="false" aria-label="Yêu thích Alokio Luxe Hạ Long"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.8 6.5 4.5c2-.2 3.6.9 4.5 2.4.9-1.5 2.5-2.6 4.5-2.4 3.5.3 5.3 3.8 3.7 6.9C19 15.6 12 20 12 20Z"/></svg></button>
+  <div class="pcard__body">
+    <a class="pcard__name" href="san-pham--alokio-luxe-ha-long.html">Alokio Luxe Hạ Long</a>
+    <p class="pcard__sub">Đủ đẹp để trưng bày, đủ bền để mang ra biển.</p>
+    <div class="rating"><span class="stars" role="img" aria-label="4.7 trên 5 sao">★★★★★<span class="stars__off"></span></span> <span>4,7 (7)</span></div>
+    <div class="pcard__foot">
+      <div><span class="price">7.990.000 ₫</span></div>
+      <div class="swatches" aria-label="Màu: Ngọc Trai, Sương Sớm, Huyền"><span class="swatch" style="background:#EFE7DA" title="Ngọc Trai"></span><span class="swatch" style="background:#BCD3EA" title="Sương Sớm"></span><span class="swatch" style="background:#141A24" title="Huyền"></span></div>
+    </div>
+    <button class="btn btn--soft btn--sm pcard__add" type="button" data-add="p-halong" data-finish="ngoc-trai" data-name="Alokio Luxe Hạ Long" ><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg> Thêm vào giỏ</button>
+  </div>
+</article></div>
+    </div>
+    <div class="tabpanel" role="tabpanel" id="panel-tai-gia" aria-labelledby="tab-tai-gia" hidden data-panel="tai-gia">
+      <div class="stage">
+        <div class="stage__view" data-stage-view data-model='{"type":"hifi","size":"s"}' data-finish="ngoc-trai">
+          <img class="stage__img" src="img/products/alokio-luxe-hoi-an.webp" alt="Alokio Luxe Hội An" width="900" height="780" loading="lazy">
+          <span class="view-hint">Kéo để xoay 360°</span>
+        </div>
+        <div class="stage__info">
+          <span class="tag tag--concept">Bộ sưu tập cao cấp</span>
+          <h3>Alokio Luxe Hội An</h3>
+          <p class="stage__tagline">Ánh đèn lồng cho căn phòng nhỏ.</p>
+          <ul class="stage__specs"><li>60 W · 45 Hz–20 kHz</li><li>Núm analog champagne</li><li>Bluetooth 5.3 + AUX</li></ul>
+          <div class="stage__price"><span class="price">6.990.000 ₫</span></div>
+          <div class="stage__ctas">
+            <a class="btn btn--primary" href="san-pham--alokio-luxe-hoi-an.html#atelier"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3c.6 4.2 2.8 6.4 7 7-4.2.6-6.4 2.8-7 7-.6-4.2-2.8-6.4-7-7 4.2-.6 6.4-2.8 7-7Z"/></svg> Tuỳ biến tại Atelier</a>
+            <button class="btn btn--ghost" type="button" data-add="p-hoian" data-finish="ngoc-trai" data-name="Alokio Luxe Hội An"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg> Thêm vào giỏ</button>
+          </div>
+        </div>
+      </div>
+      <div class="rail" style="margin-top:40px">
+<article class="pcard pcard--luxe ">
+  <a class="pcard__media" href="san-pham--alokio-luxe-hoi-an.html" tabindex="-1" aria-hidden="true">
+    <img src="img/products/alokio-luxe-hoi-an.webp" alt="" width="600" height="600" loading="lazy" decoding="async">
+  </a>
+  <div class="pcard__tags">
+    <span class="tag tag--concept">Alokio Luxe</span>
+    
+    
+  </div>
+  <button class="icon-btn pcard__wish" type="button" data-wish="p-hoian" aria-pressed="false" aria-label="Yêu thích Alokio Luxe Hội An"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.8 6.5 4.5c2-.2 3.6.9 4.5 2.4.9-1.5 2.5-2.6 4.5-2.4 3.5.3 5.3 3.8 3.7 6.9C19 15.6 12 20 12 20Z"/></svg></button>
+  <div class="pcard__body">
+    <a class="pcard__name" href="san-pham--alokio-luxe-hoi-an.html">Alokio Luxe Hội An</a>
+    <p class="pcard__sub">Ánh đèn lồng cho căn phòng nhỏ.</p>
+    <div class="rating"><span class="stars" role="img" aria-label="4.8 trên 5 sao">★★★★★<span class="stars__off"></span></span> <span>4,8 (5)</span></div>
+    <div class="pcard__foot">
+      <div><span class="price">6.990.000 ₫</span></div>
+      <div class="swatches" aria-label="Màu: Ngọc Trai, Sương Sớm, Óc Chó"><span class="swatch" style="background:#EFE7DA" title="Ngọc Trai"></span><span class="swatch" style="background:#BCD3EA" title="Sương Sớm"></span><span class="swatch" style="background:#6A4630" title="Óc Chó"></span></div>
+    </div>
+    <button class="btn btn--soft btn--sm pcard__add" type="button" data-add="p-hoian" data-finish="ngoc-trai" data-name="Alokio Luxe Hội An" ><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg> Thêm vào giỏ</button>
+  </div>
+</article>
+<article class="pcard pcard--luxe ">
+  <a class="pcard__media" href="san-pham--alokio-luxe-hue.html" tabindex="-1" aria-hidden="true">
+    <img src="img/products/alokio-luxe-hue.webp" alt="" width="600" height="600" loading="lazy" decoding="async">
+  </a>
+  <div class="pcard__tags">
+    <span class="tag tag--concept">Alokio Luxe</span>
+    
+    
+  </div>
+  <button class="icon-btn pcard__wish" type="button" data-wish="p-hue" aria-pressed="false" aria-label="Yêu thích Alokio Luxe Huế"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.8 6.5 4.5c2-.2 3.6.9 4.5 2.4.9-1.5 2.5-2.6 4.5-2.4 3.5.3 5.3 3.8 3.7 6.9C19 15.6 12 20 12 20Z"/></svg></button>
+  <div class="pcard__body">
+    <a class="pcard__name" href="san-pham--alokio-luxe-hue.html">Alokio Luxe Huế</a>
+    <p class="pcard__sub">Trầm mặc, sâu lắng như sông Hương.</p>
+    <div class="rating"><span class="stars" role="img" aria-label="4.7 trên 5 sao">★★★★★<span class="stars__off"></span></span> <span>4,7 (3)</span></div>
+    <div class="pcard__foot">
+      <div><span class="price">9.490.000 ₫</span></div>
+      <div class="swatches" aria-label="Màu: Ngọc Trai, Huyền, Óc Chó"><span class="swatch" style="background:#EFE7DA" title="Ngọc Trai"></span><span class="swatch" style="background:#141A24" title="Huyền"></span><span class="swatch" style="background:#6A4630" title="Óc Chó"></span></div>
+    </div>
+    <button class="btn btn--soft btn--sm pcard__add" type="button" data-add="p-hue" data-finish="ngoc-trai" data-name="Alokio Luxe Huế" ><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg> Thêm vào giỏ</button>
+  </div>
+</article>
+<article class="pcard pcard--luxe ">
+  <a class="pcard__media" href="san-pham--alokio-luxe-trang-an.html" tabindex="-1" aria-hidden="true">
+    <img src="img/products/alokio-luxe-trang-an.webp" alt="" width="600" height="600" loading="lazy" decoding="async">
+  </a>
+  <div class="pcard__tags">
+    <span class="tag tag--concept">Alokio Luxe</span>
+    
+    
+  </div>
+  <button class="icon-btn pcard__wish" type="button" data-wish="p-trangan" aria-pressed="false" aria-label="Yêu thích Alokio Luxe Tràng An"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.8 6.5 4.5c2-.2 3.6.9 4.5 2.4.9-1.5 2.5-2.6 4.5-2.4 3.5.3 5.3 3.8 3.7 6.9C19 15.6 12 20 12 20Z"/></svg></button>
+  <div class="pcard__body">
+    <a class="pcard__name" href="san-pham--alokio-luxe-trang-an.html">Alokio Luxe Tràng An</a>
+    <p class="pcard__sub">Ba đường tiếng, một không gian rộng mở.</p>
+    <div class="rating"><span class="stars" role="img" aria-label="4.9 trên 5 sao">★★★★★<span class="stars__off"></span></span> <span>4,9 (7)</span></div>
+    <div class="pcard__foot">
+      <div><span class="price">13.990.000 ₫</span></div>
+      <div class="swatches" aria-label="Màu: Huyền, Óc Chó"><span class="swatch" style="background:#141A24" title="Huyền"></span><span class="swatch" style="background:#6A4630" title="Óc Chó"></span></div>
+    </div>
+    <button class="btn btn--soft btn--sm pcard__add" type="button" data-add="p-trangan" data-finish="huyen" data-name="Alokio Luxe Tràng An" ><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg> Thêm vào giỏ</button>
+  </div>
+</article></div>
+    </div>
+    <div class="tabpanel" role="tabpanel" id="panel-rap-phim" aria-labelledby="tab-rap-phim" hidden data-panel="rap-phim">
+      <div class="stage">
+        <div class="stage__view" data-stage-view data-model='{"type":"bar"}' data-finish="ngoc-trai">
+          <img class="stage__img" src="img/products/alokio-luxe-song-huong.webp" alt="Alokio Luxe Sông Hương" width="900" height="780" loading="lazy">
+          <span class="view-hint">Kéo để xoay 360°</span>
+        </div>
+        <div class="stage__info">
+          <span class="tag tag--concept">Bộ sưu tập cao cấp</span>
+          <h3>Alokio Luxe Sông Hương</h3>
+          <p class="stage__tagline">Dòng sông âm thanh dưới màn hình.</p>
+          <ul class="stage__specs"><li>Dolby Atmos (ảo hoá)</li><li>HDMI eARC</li><li>5 ampli Class-D</li></ul>
+          <div class="stage__price"><span class="price">12.490.000 ₫</span></div>
+          <div class="stage__ctas">
+            <a class="btn btn--primary" href="san-pham--alokio-luxe-song-huong.html#atelier"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3c.6 4.2 2.8 6.4 7 7-4.2.6-6.4 2.8-7 7-.6-4.2-2.8-6.4-7-7 4.2-.6 6.4-2.8 7-7Z"/></svg> Tuỳ biến tại Atelier</a>
+            <button class="btn btn--ghost" type="button" data-add="p-songhuong" data-finish="ngoc-trai" data-name="Alokio Luxe Sông Hương"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg> Thêm vào giỏ</button>
+          </div>
+        </div>
+      </div>
+      <div class="rail" style="margin-top:40px">
+<article class="pcard pcard--luxe ">
+  <a class="pcard__media" href="san-pham--alokio-luxe-ho-tay.html" tabindex="-1" aria-hidden="true">
+    <img src="img/products/alokio-luxe-ho-tay.webp" alt="" width="600" height="600" loading="lazy" decoding="async">
+  </a>
+  <div class="pcard__tags">
+    <span class="tag tag--concept">Alokio Luxe</span>
+    
+    
+  </div>
+  <button class="icon-btn pcard__wish" type="button" data-wish="p-hotay" aria-pressed="false" aria-label="Yêu thích Alokio Luxe Hồ Tây"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.8 6.5 4.5c2-.2 3.6.9 4.5 2.4.9-1.5 2.5-2.6 4.5-2.4 3.5.3 5.3 3.8 3.7 6.9C19 15.6 12 20 12 20Z"/></svg></button>
+  <div class="pcard__body">
+    <a class="pcard__name" href="san-pham--alokio-luxe-ho-tay.html">Alokio Luxe Hồ Tây</a>
+    <p class="pcard__sub">Thông minh, tĩnh lặng như mặt hồ.</p>
+    <div class="rating"><span class="stars" role="img" aria-label="5 trên 5 sao">★★★★★<span class="stars__off"></span></span> <span>5 (3)</span></div>
+    <div class="pcard__foot">
+      <div><span class="price">7.490.000 ₫</span></div>
+      <div class="swatches" aria-label="Màu: Ngọc Trai, Sương Sớm"><span class="swatch" style="background:#EFE7DA" title="Ngọc Trai"></span><span class="swatch" style="background:#BCD3EA" title="Sương Sớm"></span></div>
+    </div>
+    <button class="btn btn--soft btn--sm pcard__add" type="button" data-add="p-hotay" data-finish="ngoc-trai" data-name="Alokio Luxe Hồ Tây" ><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg> Thêm vào giỏ</button>
+  </div>
+</article>
+<article class="pcard pcard--luxe ">
+  <a class="pcard__media" href="san-pham--alokio-luxe-song-huong.html" tabindex="-1" aria-hidden="true">
+    <img src="img/products/alokio-luxe-song-huong.webp" alt="" width="600" height="600" loading="lazy" decoding="async">
+  </a>
+  <div class="pcard__tags">
+    <span class="tag tag--concept">Alokio Luxe</span>
+    
+    
+  </div>
+  <button class="icon-btn pcard__wish" type="button" data-wish="p-songhuong" aria-pressed="false" aria-label="Yêu thích Alokio Luxe Sông Hương"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.8 6.5 4.5c2-.2 3.6.9 4.5 2.4.9-1.5 2.5-2.6 4.5-2.4 3.5.3 5.3 3.8 3.7 6.9C19 15.6 12 20 12 20Z"/></svg></button>
+  <div class="pcard__body">
+    <a class="pcard__name" href="san-pham--alokio-luxe-song-huong.html">Alokio Luxe Sông Hương</a>
+    <p class="pcard__sub">Dòng sông âm thanh dưới màn hình.</p>
+    <div class="rating"><span class="stars" role="img" aria-label="4.3 trên 5 sao">★★★★<span class="stars__off">★</span></span> <span>4,3 (3)</span></div>
+    <div class="pcard__foot">
+      <div><span class="price">12.490.000 ₫</span></div>
+      <div class="swatches" aria-label="Màu: Ngọc Trai, Huyền"><span class="swatch" style="background:#EFE7DA" title="Ngọc Trai"></span><span class="swatch" style="background:#141A24" title="Huyền"></span></div>
+    </div>
+    <button class="btn btn--soft btn--sm pcard__add" type="button" data-add="p-songhuong" data-finish="ngoc-trai" data-name="Alokio Luxe Sông Hương" ><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg> Thêm vào giỏ</button>
+  </div>
+</article>
+<article class="pcard pcard--luxe ">
+  <a class="pcard__media" href="san-pham--alokio-luxe-son-doong.html" tabindex="-1" aria-hidden="true">
+    <img src="img/products/alokio-luxe-son-doong.webp" alt="" width="600" height="600" loading="lazy" decoding="async">
+  </a>
+  <div class="pcard__tags">
+    <span class="tag tag--concept">Alokio Luxe</span>
+    
+    
+  </div>
+  <button class="icon-btn pcard__wish" type="button" data-wish="p-sondoong" aria-pressed="false" aria-label="Yêu thích Alokio Luxe Sơn Đoòng"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.8 6.5 4.5c2-.2 3.6.9 4.5 2.4.9-1.5 2.5-2.6 4.5-2.4 3.5.3 5.3 3.8 3.7 6.9C19 15.6 12 20 12 20Z"/></svg></button>
+  <div class="pcard__body">
+    <a class="pcard__name" href="san-pham--alokio-luxe-son-doong.html">Alokio Luxe Sơn Đoòng</a>
+    <p class="pcard__sub">Tiếng trầm sâu như hang động lớn nhất thế giới.</p>
+    <div class="rating"><span class="stars" role="img" aria-label="4.7 trên 5 sao">★★★★★<span class="stars__off"></span></span> <span>4,7 (3)</span></div>
+    <div class="pcard__foot">
+      <div><span class="price">9.990.000 ₫</span></div>
+      <div class="swatches" aria-label="Màu: Ngọc Trai, Huyền"><span class="swatch" style="background:#EFE7DA" title="Ngọc Trai"></span><span class="swatch" style="background:#141A24" title="Huyền"></span></div>
+    </div>
+    <button class="btn btn--soft btn--sm pcard__add" type="button" data-add="p-sondoong" data-finish="ngoc-trai" data-name="Alokio Luxe Sơn Đoòng" ><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg> Thêm vào giỏ</button>
+  </div>
+</article></div>
+    </div>
+    <div class="tabpanel" role="tabpanel" id="panel-tiec" aria-labelledby="tab-tiec" hidden data-panel="tiec">
+      <div class="stage">
+        <div class="stage__view" data-stage-view data-model='{"type":"tower"}' data-finish="huyen">
+          <img class="stage__img" src="img/products/alokio-luxe-le-hoi.webp" alt="Alokio Luxe Lễ Hội" width="900" height="780" loading="lazy">
+          <span class="view-hint">Kéo để xoay 360°</span>
+        </div>
+        <div class="stage__info">
+          <span class="tag tag--concept">Bộ sưu tập cao cấp</span>
+          <h3>Alokio Luxe Lễ Hội</h3>
+          <p class="stage__tagline">Bữa tiệc sang trọng, mang đi bằng một tay kéo.</p>
+          <ul class="stage__specs"><li>240 W</li><li>Pin tháo rời 18 giờ</li><li>Vòng LED champagne</li></ul>
+          <div class="stage__price"><span class="price">11.990.000 ₫</span></div>
+          <div class="stage__ctas">
+            <a class="btn btn--primary" href="san-pham--alokio-luxe-le-hoi.html#atelier"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3c.6 4.2 2.8 6.4 7 7-4.2.6-6.4 2.8-7 7-.6-4.2-2.8-6.4-7-7 4.2-.6 6.4-2.8 7-7Z"/></svg> Tuỳ biến tại Atelier</a>
+            <button class="btn btn--ghost" type="button" data-add="p-lehoi" data-finish="huyen" data-name="Alokio Luxe Lễ Hội"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg> Thêm vào giỏ</button>
+          </div>
+        </div>
+      </div>
+      <div class="rail" style="margin-top:40px">
+<article class="pcard pcard--luxe ">
+  <a class="pcard__media" href="san-pham--alokio-luxe-le-hoi.html" tabindex="-1" aria-hidden="true">
+    <img src="img/products/alokio-luxe-le-hoi.webp" alt="" width="600" height="600" loading="lazy" decoding="async">
+  </a>
+  <div class="pcard__tags">
+    <span class="tag tag--concept">Alokio Luxe</span>
+    
+    
+  </div>
+  <button class="icon-btn pcard__wish" type="button" data-wish="p-lehoi" aria-pressed="false" aria-label="Yêu thích Alokio Luxe Lễ Hội"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.8 6.5 4.5c2-.2 3.6.9 4.5 2.4.9-1.5 2.5-2.6 4.5-2.4 3.5.3 5.3 3.8 3.7 6.9C19 15.6 12 20 12 20Z"/></svg></button>
+  <div class="pcard__body">
+    <a class="pcard__name" href="san-pham--alokio-luxe-le-hoi.html">Alokio Luxe Lễ Hội</a>
+    <p class="pcard__sub">Bữa tiệc sang trọng, mang đi bằng một tay kéo.</p>
+    <div class="rating"><span class="stars" role="img" aria-label="4.1 trên 5 sao">★★★★<span class="stars__off">★</span></span> <span>4,1 (7)</span></div>
+    <div class="pcard__foot">
+      <div><span class="price">11.990.000 ₫</span></div>
+      <div class="swatches" aria-label="Màu: Huyền, Óc Chó"><span class="swatch" style="background:#141A24" title="Huyền"></span><span class="swatch" style="background:#6A4630" title="Óc Chó"></span></div>
+    </div>
+    <button class="btn btn--soft btn--sm pcard__add" type="button" data-add="p-lehoi" data-finish="huyen" data-name="Alokio Luxe Lễ Hội" ><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg> Thêm vào giỏ</button>
+  </div>
+</article></div>
+    </div>
+  </div>
+</section>
+
+<section class="section inside" data-inside aria-labelledby="in-title">
+  <div class="container">
+    <div class="section__head">
+      <div><span class="eyebrow reveal">Bên trong Alokio</span><h2 class="h2 reveal" id="in-title">Chất liệu, cấu tạo và <em>âm thanh</em>.</h2></div>
+      <p class="lede reveal">Ba góc nhìn vào một chiếc loa Alokio: chạm vào vật liệu, mở từng lớp linh kiện và tự tay vặn núm để nghe.</p>
+    </div>
+    <div class="inside__tabs reveal" role="tablist" aria-label="Bên trong Alokio">
+      <button type="button" role="tab" id="in-t-0" aria-controls="in-p-0" aria-selected="true" data-in-tab><i>01</i>Chất liệu</button>
+      <button type="button" role="tab" id="in-t-1" aria-controls="in-p-1" aria-selected="false" tabindex="-1" data-in-tab><i>02</i>Cấu tạo</button>
+      <button type="button" role="tab" id="in-t-2" aria-controls="in-p-2" aria-selected="false" tabindex="-1" data-in-tab><i>03</i>Âm thanh</button>
+    </div>
+
+    <div class="inside__panel inside__mat" role="tabpanel" id="in-p-0" aria-labelledby="in-t-0" data-in-panel>
+      <p class="inside__hint">Rê chuột (hoặc chạm) để ánh đèn studio quét qua bề mặt: ánh trai đổi màu, sơn mài sâu thẳm, vải lanh mềm và nhôm phay champagne.</p>
+      <div class="matroom" data-matroom>
+      <img src="img/matroom.webp" alt="Bốn mẫu vật liệu: sơn mài, khảm trai, vải lanh, nhôm champagne" width="1600" height="700" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+      <div class="matroom__labels">
+        <div><h3>Sơn mài</h3><p>Nhiều lớp, mài tay, bóng sâu như mặt hồ.</p></div>
+        <div><h3>Khảm trai</h3><p>Mảnh xà cừ ghép tay, đổi sắc theo góc nhìn.</p></div>
+        <div><h3>Vải lanh</h3><p>Dệt kim, cho âm thanh đi xuyên mà vẫn mềm mắt.</p></div>
+        <div><h3>Nhôm champagne</h3><p>Phay CNC, vân xước tròn trên mỗi núm vặn.</p></div>
+      </div>
+      </div>
+    </div>
+
+    <div class="inside__panel inside__ex" role="tabpanel" id="in-p-1" aria-labelledby="in-t-1" data-in-panel data-exploded hidden>
+      <div class="exploded__view" data-exploded-view><img src="img/products/alokio-luxe-ha-long.webp" alt="Alokio Luxe Hạ Long" width="900" height="900" loading="lazy" style="position:absolute;inset:0;margin:auto;max-height:80%;object-fit:contain"></div>
+      <div class="exploded__copy">
+        <h3 class="inside__h">Bên trong Hạ Long: <em>8 lớp</em> linh kiện.</h3>
+        <div class="exrange"><label for="ex-range">Kéo để mở loa</label><input id="ex-range" type="range" min="0" max="100" step="1" value="0" data-ex-range><output for="ex-range" data-ex-out>0%</output></div>
+        <ol class="exploded__steps" data-exploded-steps>
+        <li><button type="button" data-ex-step><b>Mặt vải lanh</b><span>Dệt kim 3D, xuyên âm 96%.</span></button></li>
+        <li><button type="button" data-ex-step><b>Khung nhôm champagne</b><span>Nhôm 6063 phay CNC, anod champagne.</span></button></li>
+        <li><button type="button" data-ex-step><b>2 tweeter lụa 20 mm</b><span>Nam châm neodymium, trong trẻo tới 20 kHz.</span></button></li>
+        <li><button type="button" data-ex-step><b>2 woofer 3"</b><span>Màng giấy sợi dài, 2 × 30 W, xuống 45 Hz.</span></button></li>
+        <li><button type="button" data-ex-step><b>Khung sườn nhôm</b><span>Nguyên tấm, siết bằng 12 ốc M3 inox.</span></button></li>
+        <li><button type="button" data-ex-step><b>Bo mạch Class-D</b><span>2 × 40 W, DSP 32-bit, Bluetooth 5.3.</span></button></li>
+        <li><button type="button" data-ex-step><b>Thanh pin module</b><span>7,2 V · 6800 mAh, nghe 30+ giờ, rút ra thay nhanh.</span></button></li>
+        <li><button type="button" data-ex-step><b>Vỏ sơn mài &amp; quai da</b><span>9 lớp mài tay, chuẩn IP67, nổi trên nước.</span></button></li>
+      </ol>
+        <div class="stats">
+        <div class="stat"><b data-count="80" data-suffix=" W">0</b><span>Công suất · Hạ Long</span></div>
+        <div class="stat"><b data-count="30" data-suffix="+ giờ">0</b><span>Pin · Hạ Long</span></div>
+        <div class="stat"><b data-count="150" data-suffix=" W">0</b><span>Công suất · Tràng An</span></div>
+        <div class="stat"><b data-count="67" data-suffix="">0</b><span>Chuẩn IP · Giọt, Sóng, Hạ Long</span></div>
+      </div>
+      </div>
+    </div>
+
+    <div class="inside__panel knobs" role="tabpanel" id="in-p-2" aria-labelledby="in-t-2" data-in-panel hidden>
+      <div class="knobs__view" data-knobs-view>
+      <img src="img/products/alokio-luxe-hoi-an.webp" alt="Núm vặn analog champagne của Alokio Luxe Hội An" width="900" height="600" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:6%">
+    </div>
+      <div>
+        <h3 class="inside__h">Chạm vào <em>âm thanh</em>.</h3>
+        <p class="lede">Chọn một bài, bấm phát rồi kéo trực tiếp các núm champagne của Hội An (hoặc dùng thanh trượt) để nghe âm thanh thay đổi ngay lập tức.</p>
+      <div class="knob-sliders" data-knob-sliders>
+        <div class="knob-slider"><label for="k-vol">Volume</label><input id="k-vol" type="range" min="0" max="100" value="15" data-eq="volume"><output for="k-vol">15</output></div>
+        <div class="knob-slider"><label for="k-bass">Bass</label><input id="k-bass" type="range" min="-12" max="12" value="0" data-eq="bass"><output for="k-bass">0 dB</output></div>
+        <div class="knob-slider"><label for="k-treble">Treble</label><input id="k-treble" type="range" min="-12" max="12" value="0" data-eq="treble"><output for="k-treble">0 dB</output></div>
+      </div>
+      <div class="kplayer" data-kplayer>
+        <div class="kplayer__head"><button class="kplayer__play" type="button" data-kp-toggle aria-pressed="false" aria-label="Phát nhạc để nghe thử"><span class="kp-play"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 5v14l11-7L7 5Z"/></svg></span><span class="kp-pause" aria-hidden="true"><i></i><i></i></span></button>
+          <div class="kplayer__now"><small data-kp-state>Chọn bài để nghe thử</small><b data-kp-title>Interstellar – Main Theme</b></div>
+          <span class="eqbars" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
+        <div class="kplayer__list" role="radiogroup" aria-label="Chọn nhạc nghe thử" data-kp-list></div>
+      </div>
+        <a class="btn btn--ghost" href="san-pham--alokio-luxe-hoi-an.html" style="margin-top:14px">Xem Hội An</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="sr-title">
+  <div class="container">
+    <a class="showroom-teaser glass reveal" href="showroom.html" style="display:grid;grid-template-columns:1.4fr 1fr;align-items:center;gap:30px;padding:16px;text-decoration:none;color:inherit;border-radius:32px">
+      <img src="img/showroom-poster.webp" alt="Phòng trưng bày 3D trên mặt vịnh" width="1400" height="700" loading="lazy" style="width:100%;border-radius:22px;aspect-ratio:2/1;object-fit:cover">
+      <div style="padding:10px 20px">
+        <span class="eyebrow">Showroom 3D</span>
+        <h2 class="h2" id="sr-title" style="font-size:clamp(32px,3.6vw,52px)">Gallery <em>trên vịnh</em>.</h2>
+        <p class="muted">Dạo quanh các bục sơn mài nổi trên mặt nước, bật thử từng chiếc loa và thêm vào giỏ ngay trong không gian 3D.</p>
+        <span class="btn btn--dark"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="m4 7.5 8 4.5 8-4.5"/><path d="M12 12v9"/></svg> Vào phòng trưng bày</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="sz-title">
+  <div class="container">
+    <div class="section__head"><div><span class="eyebrow reveal">Đặt vào không gian của bạn</span><h2 class="h2 reveal" id="sz-title">Kích thước <em>thật</em>.</h2></div><p class="lede reveal">Một phòng khách thật, người cao 1,7 m đứng giữa: loa nhỏ trên kệ, trên bàn và cạnh TV, soundbar dưới TV, loa karaoke dưới sàn. Kéo ngang để xoay phòng.</p></div>
+    <div class="sizecmp reveal" data-sizecmp>
+      <img src="img/sizecmp.webp" alt="Các mẫu loa Alokio đặt trong phòng khách cạnh người cao 1,7 m" width="1600" height="720" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+    </div>
+  </div>
+</section>
+
+<section class="section karaoke" id="karaoke" aria-labelledby="ka-title">
+  <div class="container karaoke__grid">
+    <div class="karaoke__view reveal" data-karaoke-view data-model='{"type":"trolley","bass":5,"style":"ak"}'>
+      <img src="img/products/loa-keo-alokio-al-ak18.webp" alt="Loa kéo Alokio AL-AK18" width="800" height="840" loading="lazy" style="padding:8%">
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Âm Thanh Việt · Karaoke · Hàng thật</span>
+      <h2 class="h2" id="ka-title">Hát là phê, <em>kéo là đi</em>.</h2>
+      <p class="lede">Loa kéo karaoke chính hãng Alokio: thùng gỗ, bass tới 5 tấc, ampli và ắc quy tích hợp, kèm 2 micro không dây. Mua tại các kênh chính thức của Alokio.</p>
+      <div class="karaoke__cards"><a class="kcard" href="san-pham--loa-keo-alokio-al-ak18.html"><img src="img/products/loa-keo-alokio-al-ak18.webp" alt="" width="64" height="64" loading="lazy"><span><b>AL-AK18</b><small>Bass 5 tấc · 7.500.000 ₫</small></span></a><a class="kcard" href="san-pham--loa-keo-alokio-wml-gd18.html"><img src="img/products/loa-keo-alokio-wml-gd18.webp" alt="" width="64" height="64" loading="lazy"><span><b>WML-GD18</b><small>Bass 5 tấc · 7.900.000 ₫</small></span></a><a class="kcard" href="san-pham--loa-keo-alokio-al-g95.html"><img src="img/products/loa-keo-alokio-al-g95.webp" alt="" width="64" height="64" loading="lazy"><span><b>AL-G95</b><small>Bass 4 tấc gỗ dày · 4.679.000 ₫</small></span></a><a class="kcard" href="san-pham--loa-keo-alokio-al-r95.html"><img src="img/products/loa-keo-alokio-al-r95.webp" alt="" width="64" height="64" loading="lazy"><span><b>AL-R95</b><small>Thùng gỗ · 5.400.000 ₫</small></span></a></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:18px">
+        <button class="btn btn--primary" type="button" data-karaoke-mic><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg> Thử hát karaoke</button>
+        <a class="btn btn--ghost" style="color:#fff;border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.06)" href="bo-suu-tap.html?slug=am-thanh-viet-karaoke">Xem tất cả loa kéo</a>
+      </div>
+      <p class="muted" style="font-size:14px" data-mic-note>Cần quyền micro, nên dùng tai nghe để tránh hú. Giọng hát chỉ phát qua loa của bạn, không ghi âm, không gửi đi đâu.</p>
+      <div class="mic-meter" aria-hidden="true"><i data-mic-level></i></div>
+      <div style="margin-top:22px"><div class="channel-btns">
+    <a class="btn btn--shopee " href="https://vn.shp.ee/1Eokhik4" target="_blank" rel="noopener noreferrer"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7h14l-1.2 12.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/><path d="M14 11.2c-.5-.5-1.2-.8-2-.8-1.1 0-1.9.6-1.9 1.4 0 1.9 4 1 4 3 0 .9-.9 1.5-2.1 1.5-.9 0-1.7-.4-2.2-.9"/></svg> Mua trên Shopee</a>
+    <a class="btn btn--tiktok " href="https://vt.tiktok.com/ZS9PFAnTEY29m-8tE0D/" target="_blank" rel="noopener noreferrer"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16.6 3c.4 2.2 1.8 3.8 4 4v3.1c-1.5 0-2.9-.4-4-1.1v6.3a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.2a2.7 2.7 0 1 0 1.9 2.6V3h3Z" fill="currentColor" stroke="none"/></svg> TikTok Shop</a>
+    <a class="btn btn--facebook " href="https://www.facebook.com/share/18ggn741qM/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 8.5V7c0-.8.5-1.2 1.2-1.2H17V3h-2.6C11.9 3 11 4.6 11 6.8v1.7H8.5v3H11V21h3v-9.5h2.6l.4-3H14Z" fill="currentColor" stroke="none"/></svg> Facebook</a>
+  </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="ch-title">
+  <div class="container">
+    <div class="section__head"><div><span class="eyebrow reveal">Kênh chính thức</span><h2 class="h2 reveal" id="ch-title">Tìm Alokio <em>ở khắp nơi</em>.</h2></div></div>
+    <div class="channels">
+      <a class="channel reveal" href="https://www.facebook.com/share/18ggn741qM/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><span class="channel__ico" style="background:#1877F2"><svg class="ico " width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 8.5V7c0-.8.5-1.2 1.2-1.2H17V3h-2.6C11.9 3 11 4.6 11 6.8v1.7H8.5v3H11V21h3v-9.5h2.6l.4-3H14Z" fill="currentColor" stroke="none"/></svg></span><h3>Facebook</h3><p>Tin mới, livestream và tư vấn trực tiếp từ Alokio.</p><span class="link-arrow">Mở Facebook <svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></span></a>
+      <a class="channel reveal" href="https://vt.tiktok.com/ZS9PFAnTEY29m-8tE0D/" target="_blank" rel="noopener noreferrer"><span class="channel__ico" style="background:#111"><svg class="ico " width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16.6 3c.4 2.2 1.8 3.8 4 4v3.1c-1.5 0-2.9-.4-4-1.1v6.3a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.2a2.7 2.7 0 1 0 1.9 2.6V3h3Z" fill="currentColor" stroke="none"/></svg></span><h3>TikTok Shop</h3><p>“Loa Kéo Alokio – Âm Thanh Việt”: video thực tế và ưu đãi live.</p><span class="link-arrow">Mở TikTok Shop <svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></span></a>
+      <a class="channel reveal" href="https://vn.shp.ee/1Eokhik4" target="_blank" rel="noopener noreferrer"><span class="channel__ico" style="background:#EE4D2D"><svg class="ico " width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7h14l-1.2 12.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/><path d="M14 11.2c-.5-.5-1.2-.8-2-.8-1.1 0-1.9.6-1.9 1.4 0 1.9 4 1 4 3 0 .9-.9 1.5-2.1 1.5-.9 0-1.7-.4-2.2-.9"/></svg></span><h3>Shopee</h3><p>Gian hàng chính thức, mã giảm giá và giao nhanh toàn quốc.</p><span class="link-arrow">Mở Shopee <svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--mist" aria-labelledby="rv-title">
+  <div class="container">
+    <div class="section__head"><div><span class="eyebrow reveal">Người nghe nói gì</span><h2 class="h2 reveal" id="rv-title">Đẹp hơn ảnh, <em>hay hơn mong đợi</em>.</h2></div><p class="muted reveal">Cảm nhận thật từ những người đã mang Alokio về nhà.</p></div>
+    <div class="quotes"><figure class="quote glass reveal"><blockquote>“Màu Sương Sớm nhẹ nhàng, hợp phòng ngủ tông trắng. Kết nối nhanh.”</blockquote><figcaption><span class="stars" role="img" aria-label="5 trên 5 sao">★★★★★<span class="stars__off"></span></span> · Ngô Hải Tú · Alokio Luxe Giọt</figcaption></figure><figure class="quote glass reveal"><blockquote>“Đóng gói như hộp trang sức, mở ra thấy sang ngay. Pin dùng cả tuần mới sạc.”</blockquote><figcaption><span class="stars" role="img" aria-label="5 trên 5 sao">★★★★★<span class="stars__off"></span></span> · Nguyễn Đức Khoa · Alokio Luxe Giọt</figcaption></figure><figure class="quote glass reveal"><blockquote>“Đẹp hơn ảnh rất nhiều, ánh khảm trai đổi màu theo góc nhìn. Đặt ở phòng khách ai cũng hỏi.”</blockquote><figcaption><span class="stars" role="img" aria-label="5 trên 5 sao">★★★★★<span class="stars__off"></span></span> · Dương Ngọc Khoa · Alokio Luxe Giọt</figcaption></figure></div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="bl-title">
+  <div class="container">
+    <div class="section__head"><div><span class="eyebrow reveal">Cẩm nang âm thanh</span><h2 class="h2 reveal" id="bl-title">Đọc trước khi <em>nghe</em>.</h2></div><a class="link-arrow reveal" href="blog.html">Tất cả bài viết <svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a></div>
+    <div class="posts"><a class="post-card reveal" href="bai-viet--cau-chuyen-son-mai-va-kham-trai.html"><div class="post-card__img"><img src="img/blog/material.webp" alt="" width="800" height="500" loading="lazy"></div><div class="post-card__body"><span class="label">Alokio Luxe</span><h3>Câu chuyện sơn mài và khảm trai trên Alokio Luxe</h3><p>Vì sao một chiếc loa bluetooth lại cần đến hai chất liệu thủ công lâu đời nhất của Việt Nam?</p></div></a><a class="post-card reveal" href="bai-viet--cach-chon-loa-keo-3-4-hay-5-tac.html"><div class="post-card__img"><img src="img/blog/karaoke.webp" alt="" width="800" height="500" loading="lazy"></div><div class="post-card__body"><span class="label">Karaoke</span><h3>Cách chọn loa kéo 3, 4 hay 5 tấc cho đúng nhu cầu</h3><p>&quot;Tấc&quot; là gì, và vì sao loa kéo 5 tấc không phải lúc nào cũng tốt hơn.</p></div></a><a class="post-card reveal" href="bai-viet--chon-loa-bluetooth-cao-cap-cho-phong-khach.html"><div class="post-card__img"><img src="img/blog/home.webp" alt="" width="800" height="500" loading="lazy"></div><div class="post-card__body"><span class="label">Tư vấn</span><h3>Chọn loa bluetooth cao cấp cho phòng khách: 5 điều cần biết</h3><p>Diện tích phòng, công suất, kết nối TV và cả… màu sắc. Hướng dẫn chọn loa tại gia không hối tiếc.</p></div></a></div>
+  </div>
+</section>
+
+<section class="cta" aria-labelledby="cta-title">
+  <div class="container">
+    <h2 class="display reveal" id="cta-title">Chọn chiếc loa <em>của riêng bạn.</em></h2>
+    <div class="cta__btns reveal">
+      <a class="btn btn--primary btn--lg" href="cua-hang.html">Vào cửa hàng <svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+      <a class="btn btn--ghost btn--lg" href="lien-he.html#dat-lich">Đặt lịch nghe thử tại showroom</a>
+    </div>
+    <form class="pill-form reveal" data-newsletter novalidate>
+      <label class="sr-only" for="nl-cta">Email nhận tin</label>
+      <input id="nl-cta" type="email" name="email" placeholder="Nhận tin về bộ sưu tập mới" autocomplete="email" required>
+      <button class="btn btn--primary" type="submit">Đăng ký</button>
+      <p class="form-msg" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<section class="section--tight" aria-label="Cam kết của Alokio">
+  <div class="container promise">
+    <div class="reveal"><svg class="ico " width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 4.5 6v6c0 4.4 3.2 7.8 7.5 9 4.3-1.2 7.5-4.6 7.5-9V6L12 3Z"/><path d="m9 12 2 2 4-4"/></svg><span>Bảo hành Luxe 24 tháng</span></div>
+    <div class="reveal"><svg class="ico " width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6h11v10H3z"/><path d="M14 9h4l3 3v4h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg><span>Giao hoả tốc 2 giờ</span></div>
+    <div class="reveal"><svg class="ico " width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 11a8 8 0 0 0-14.3-4.3L4 9"/><path d="M4 4v5h5"/><path d="M4 13a8 8 0 0 0 14.3 4.3L20 15"/><path d="M20 20v-5h-5"/></svg><span>Đổi trả trong 30 ngày</span></div>
+    <div class="reveal"><svg class="ico " width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h3"/></svg><span>Trả góp 0%</span></div>
+  </div>
+</section></main>
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <span class="wordmark logo--footer">ALOKIO</span>
+      <p class="muted">Âm Thanh Việt. Loa kéo karaoke chính hãng và bộ sưu tập cao cấp Alokio Luxe: sơn mài, khảm trai, vải lanh và nhôm champagne.</p>
+      <form class="pill-form" data-newsletter novalidate>
+        <label class="sr-only" for="nl-footer">Email nhận tin</label>
+        <input id="nl-footer" type="email" name="email" placeholder="Email của bạn" autocomplete="email" required>
+        <button class="btn btn--primary" type="submit">Nhận tin</button>
+        <p class="form-msg" aria-live="polite"></p>
+      </form>
+    </div>
+    <div>
+      <h2 class="footer__title">Sản phẩm</h2>
+      <ul class="footer__list">
+        <li><a href="bo-suu-tap.html?slug=alokio-luxe">Alokio Luxe</a></li>
+        <li><a href="danh-muc.html?slug=loa-di-dong">Loa di động</a></li>
+        <li><a href="danh-muc.html?slug=loa-nghe-tai-gia">Loa nghe tại gia</a></li>
+        <li><a href="danh-muc.html?slug=soundbar-rap-phim">Soundbar & rạp phim</a></li>
+        <li><a href="bo-suu-tap.html?slug=am-thanh-viet-karaoke">Loa kéo karaoke</a></li>
+        <li><a href="danh-muc.html?slug=phu-kien">Phụ kiện</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer__title">Hỗ trợ</h2>
+      <ul class="footer__list">
+        <li><a href="tra-cuu-don-hang.html">Tra cứu đơn hàng</a></li>
+        <li><a href="ho-tro.html">Câu hỏi thường gặp</a></li>
+        <li><a href="chinh-sach.html?slug=van-chuyen">Vận chuyển</a></li>
+        <li><a href="chinh-sach.html?slug=doi-tra">Đổi trả</a></li>
+        <li><a href="chinh-sach.html?slug=bao-hanh">Bảo hành</a></li>
+        <li><a href="chinh-sach.html?slug=bao-mat">Bảo mật</a></li>
+        <li><a href="lien-he.html">Liên hệ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer__title">Kênh chính thức</h2>
+      <ul class="footer__list footer__social">
+        <li><a href="https://www.facebook.com/share/18ggn741qM/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 8.5V7c0-.8.5-1.2 1.2-1.2H17V3h-2.6C11.9 3 11 4.6 11 6.8v1.7H8.5v3H11V21h3v-9.5h2.6l.4-3H14Z" fill="currentColor" stroke="none"/></svg> Facebook</a></li>
+        <li><a href="https://vt.tiktok.com/ZS9PFAnTEY29m-8tE0D/" target="_blank" rel="noopener noreferrer"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16.6 3c.4 2.2 1.8 3.8 4 4v3.1c-1.5 0-2.9-.4-4-1.1v6.3a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.2a2.7 2.7 0 1 0 1.9 2.6V3h3Z" fill="currentColor" stroke="none"/></svg> TikTok Shop</a></li>
+        <li><a href="https://vn.shp.ee/1Eokhik4" target="_blank" rel="noopener noreferrer"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7h14l-1.2 12.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/><path d="M14 11.2c-.5-.5-1.2-.8-2-.8-1.1 0-1.9.6-1.9 1.4 0 1.9 4 1 4 3 0 .9-.9 1.5-2.1 1.5-.9 0-1.7-.4-2.2-.9"/></svg> Shopee</a></li>
+      </ul>
+      <button class="btn btn--soft btn--sm" type="button" data-lite-toggle aria-pressed="false"><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></svg> <span>Chế độ nhẹ: Tắt</span></button>
+    </div>
+  </div>
+  <div class="container footer__legal">
+    <p>© 2026 Alokio – Âm Thanh Việt. Website demo phục vụ đồ án môn học: dòng Alokio Luxe là sản phẩm ý tưởng; đánh giá, đơn hàng và số liệu là dữ liệu mẫu; mọi thanh toán là giả lập (sandbox), không phát sinh giao dịch thật. Mua loa kéo Alokio chính hãng tại các kênh chính thức.</p>
+    <p><a href="dieu-khoan.html">Điều khoản</a> · <a href="chinh-sach.html?slug=bao-mat">Bảo mật</a> · <a href="admin.html">Quản trị</a></p>
+  </div>
+</footer>
+
+<aside class="dock" data-rail aria-label="Âm lượng và điều hướng nhanh">
+  <button class="dock__btn" type="button" data-sound-toggle aria-pressed="false" title="Âm thanh: Tắt"><span class="sr-only" data-sound-label>Âm thanh: Tắt</span><svg class="ico when-off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="m16 9 5 6"/><path d="m21 9-5 6"/></svg><svg class="ico when-on" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button>
+  <div class="dock__vol" data-vol role="slider" tabindex="0" aria-label="Âm lượng" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80" aria-valuetext="80%">
+    <span class="dock__track"><span class="dock__fill" data-vol-fill></span><span class="dock__thumb" data-vol-thumb></span></span>
+  </div>
+  <span class="dock__pct" data-vol-pct aria-hidden="true">80</span>
+  <div class="dock__music">
+    <button class="dock__btn dock__note" type="button" data-music-open aria-haspopup="true" aria-expanded="false" aria-controls="music-menu" title="Chọn nhạc nền"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg><span class="sr-only">Chọn nhạc nền</span></button>
+    <div class="dock__menu" id="music-menu" data-music-menu role="menu" aria-label="Chọn nhạc nền" hidden>
+      <p class="dock__menu-title">Nhạc nền <span>· nghe thử</span></p>
+      <div class="dock__list" data-music-list></div>
+    </div>
+  </div>
+  <span class="dock__sep" aria-hidden="true"></span>
+  <button class="dock__btn dock__top" type="button" data-to-top title="Lên đầu trang" aria-label="Lên đầu trang"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+  <span class="dock__tip" data-rail-tip role="status" aria-live="polite"></span>
+</aside>
+<div class="drawer" id="minicart" data-minicart role="dialog" aria-modal="true" aria-labelledby="minicart-title" hidden>
+  <div class="drawer__scrim" data-close></div>
+  <div class="drawer__panel" tabindex="-1">
+    <div class="drawer__head"><h2 id="minicart-title">Giỏ hàng</h2><button class="icon-btn" type="button" data-close aria-label="Đóng giỏ hàng"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+    <div class="drawer__body" data-minicart-body><p class="muted">Đang tải…</p></div>
+    <div class="drawer__foot" data-minicart-foot></div>
+  </div>
+</div>
+<div class="drawer drawer--left" id="mobile-menu" data-mobile-menu role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="drawer__scrim" data-close></div>
+  <div class="drawer__panel" tabindex="-1">
+    <div class="drawer__paint" data-menu-paint aria-hidden="true"></div>
+    <div class="drawer__head"><span class="wordmark ">ALOKIO</span><button class="icon-btn" type="button" data-close aria-label="Đóng menu"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+    <nav class="drawer__body mobile-nav" aria-label="Menu di động">
+      <span class="mobile-nav__eyebrow">Âm Thanh Việt · Bộ sưu tập 2026</span>
+      <a href="index.html">Trang chủ</a><a href="bo-suu-tap.html?slug=alokio-luxe">Alokio Luxe</a><a href="bo-suu-tap.html?slug=am-thanh-viet-karaoke">Karaoke</a><a href="showroom.html">Showroom 3D</a><a href="flash-sale.html">Flash sale</a><a href="blog.html">Cẩm nang</a><a href="ho-tro.html">Hỗ trợ</a>
+      <a href="cua-hang.html">Tất cả sản phẩm</a><a href="so-sanh.html">So sánh</a><a href="yeu-thich.html">Yêu thích</a>
+      <a href="dang-nhap.html">Tài khoản</a><a href="tra-cuu-don-hang.html">Tra cứu đơn hàng</a>
+      <div class="mobile-nav__social">
+        <a href="https://www.facebook.com/share/18ggn741qM/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 8.5V7c0-.8.5-1.2 1.2-1.2H17V3h-2.6C11.9 3 11 4.6 11 6.8v1.7H8.5v3H11V21h3v-9.5h2.6l.4-3H14Z" fill="currentColor" stroke="none"/></svg> Facebook</a>
+        <a href="https://vt.tiktok.com/ZS9PFAnTEY29m-8tE0D/" target="_blank" rel="noopener noreferrer"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16.6 3c.4 2.2 1.8 3.8 4 4v3.1c-1.5 0-2.9-.4-4-1.1v6.3a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.2a2.7 2.7 0 1 0 1.9 2.6V3h3Z" fill="currentColor" stroke="none"/></svg> TikTok Shop</a>
+        <a href="https://vn.shp.ee/1Eokhik4" target="_blank" rel="noopener noreferrer"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7h14l-1.2 12.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/><path d="M14 11.2c-.5-.5-1.2-.8-2-.8-1.1 0-1.9.6-1.9 1.4 0 1.9 4 1 4 3 0 .9-.9 1.5-2.1 1.5-.9 0-1.7-.4-2.2-.9"/></svg> Shopee</a>
+      </div>
+    </nav>
+  </div>
+</div>
+<div class="search-overlay" data-search role="dialog" aria-modal="true" aria-label="Tìm kiếm" hidden>
+  <div class="search-overlay__panel">
+    <form action="/tim-kiem" method="get" class="search-form" role="search">
+      <svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <label class="sr-only" for="q-global">Tìm sản phẩm</label>
+      <input id="q-global" name="q" type="search" placeholder="Tìm loa, bộ sưu tập, bài viết…" autocomplete="off" data-search-input aria-controls="search-suggest" aria-autocomplete="list">
+      <button class="icon-btn" type="button" data-close aria-label="Đóng tìm kiếm"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </form>
+    <ul class="search-suggest" id="search-suggest" data-search-suggest role="listbox"></ul>
+  </div>
+</div>
+<div class="fab" data-fab>
+  <div class="fab__menu" id="fab-menu" hidden>
+    <a class="fab__item fab__item--fb" href="https://www.facebook.com/share/18ggn741qM/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 8.5V7c0-.8.5-1.2 1.2-1.2H17V3h-2.6C11.9 3 11 4.6 11 6.8v1.7H8.5v3H11V21h3v-9.5h2.6l.4-3H14Z" fill="currentColor" stroke="none"/></svg><span>Facebook</span></a>
+    <a class="fab__item fab__item--tt" href="https://vt.tiktok.com/ZS9PFAnTEY29m-8tE0D/" target="_blank" rel="noopener noreferrer"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16.6 3c.4 2.2 1.8 3.8 4 4v3.1c-1.5 0-2.9-.4-4-1.1v6.3a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.2a2.7 2.7 0 1 0 1.9 2.6V3h3Z" fill="currentColor" stroke="none"/></svg><span>TikTok Shop</span></a>
+    <a class="fab__item fab__item--sp" href="https://vn.shp.ee/1Eokhik4" target="_blank" rel="noopener noreferrer"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7h14l-1.2 12.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/><path d="M14 11.2c-.5-.5-1.2-.8-2-.8-1.1 0-1.9.6-1.9 1.4 0 1.9 4 1 4 3 0 .9-.9 1.5-2.1 1.5-.9 0-1.7-.4-2.2-.9"/></svg><span>Shopee</span></a>
+    <button class="fab__item fab__item--chat" type="button" data-chat-open><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1.1-4.3A8 8 0 1 1 21 12Z"/></svg><span>Chat với Alokio</span></button>
+  </div>
+  <button class="fab__btn" type="button" data-fab-toggle aria-expanded="false" aria-controls="fab-menu" aria-label="Liên hệ Alokio"><svg class="ico " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1.1-4.3A8 8 0 1 1 21 12Z"/></svg></button>
+</div>
+<section class="chat" data-chat role="dialog" aria-label="Chat với Alokio" hidden>
+  <header class="chat__head"><div><strong>Alokio</strong><span class="chat__status"><i></i> Đang trực tuyến</span></div><button class="icon-btn" type="button" data-chat-close aria-label="Đóng chat"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg></button></header>
+  <div class="chat__body" data-chat-body aria-live="polite"></div>
+  <div class="chat__quick" data-chat-quick>
+    <button type="button">Hạ Long còn màu Ngọc Trai không?</button><button type="button">Giao hàng mất bao lâu?</button><button type="button">Loa kéo mua ở đâu?</button>
+  </div>
+  <form class="chat__form" data-chat-form>
+    <label class="sr-only" for="chat-input">Nhập tin nhắn</label>
+    <input id="chat-input" name="text" placeholder="Nhập tin nhắn…" autocomplete="off" maxlength="500">
+    <button class="btn btn--primary btn--sm" type="submit">Gửi</button>
+  </form>
+</section>
+<div class="toasts" data-toasts aria-live="polite" aria-atomic="false"></div>
+<div class="ticker" data-ticker hidden aria-live="off"></div>
+<script src="js/alokio.js?v=20261123d" defer></script>
 </body>
 </html>

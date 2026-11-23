@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Sitemap: https://ango1108.github.io/ALOKIO-E-commerce/sitemap.xml

@@ -39,11 +39,16 @@ Thẻ thanh toán thử nghiệm: `4111 1111 1111 1111`, hạn bất kỳ trong 
 
 ```
 index.html, cua-hang.html, san-pham.html, … (mỗi trang của website là một file .html)
+san-pham--<mã>.html  trang từng sản phẩm, HTML xuất sẵn lúc build (đọc được cả khi chưa chạy JavaScript)
+bai-viet--<mã>.html  trang từng bài viết cẩm nang, cũng xuất sẵn
+sitemap.xml, robots.txt  cho công cụ tìm kiếm
 admin*.html          các trang quản trị
 css/                 giao diện (site.css, admin.css)
 js/alokio.js         toàn bộ mã chạy website (3D, giỏ hàng, thanh toán, quản trị, dữ liệu giả lập)
 js/nhac-*.js         nhạc nền (chỉ tải khi bật nhạc)
 img/, fonts/         hình ảnh sản phẩm (render từ mô hình 3D), phông chữ
+img/og/              ảnh xem trước khi chia sẻ link (Facebook, Zalo, Messenger) cho từng trang
+img/tex/             texture 3D dựng sẵn (gỗ, trai, bo mạch…), tải thay vì vẽ lại trên máy người xem
 ma-nguon.zip         mã nguồn gốc dễ đọc (không cần để chạy website)
 ```
 
