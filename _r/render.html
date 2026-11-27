@@ -1,0 +1,21 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body>
+<script>
+// Bộ dựng ảnh tĩnh (chỉ chạy lúc dựng, không đưa lên web)
+const noop = () => {};
+window.__alkShared = { audio: { readBands: () => ({ bass: 0, mid: 0, treble: 0 }), onBeat: noop, play: noop, pause: noop, isOn: () => false, level: () => 0 },
+  core: { $: (s) => document.querySelector(s), $$: (s) => [...document.querySelectorAll(s)], toast: noop, fmt: (n) => n }, cart: {}, live: {} };
+</script>
+<script src="alokio-3d-render.js"></script>
+<script src="lib.js"></script>
+<script src="scenes.js"></script>
+<script>
+const q = new URLSearchParams(location.search);
+window.__go = async () => {
+  try { const r = await renderShot(q.get('shot'), Number(q.get('w') || 1600), Number(q.get('h') || 900), Number(q.get('ss') || 2)); window.__out = r; }
+  catch (e) { window.__err = String(e && e.stack || e); }
+  window.__done = true;
+};
+</script>
+</body></html>
